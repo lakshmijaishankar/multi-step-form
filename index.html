@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <section class="conatiner">
+    <section class="container-inside">
+      <aside class="aside-left step-progressive">
+        <figure>
+          <img src="./images/bg-sidebar-desktop.png" alt="">
+        </figure>
+        <div class="step-prograssive">
+          <ul>
+            <li class="step step-1 flex">
+              <div class="number num-1 ">
+                <span class="num selected">1</span>
+              </div>
+              <div class="header-prograssive">
+                <span>step 1</span>
+                <header>
+                  <h1>your info</h1>
+                </header>
+              </div>
+            </li>
+            <li class="step step-2 flex">
+              <div class="number num-2">
+                <span class="num">2</span>
+              </div>
+              <div class="header-prograssive">
+                <span>step 2</span>
+                <header>
+                  <h1>select plan</h1>
+                </header>
+              </div>
+            </li>
+            <li class="step step-3 flex">
+              <div class="number num-3">
+                <span class="num">3</span>
+              </div>
+              <div class="header-prograssive">
+                <span>step 3</span>
+                <header>
+                  <h1>adds-ons</h1>
+                </header>
+              </div>
+            </li>
+            <li class="step step-4 flex">
+              <div class="number num-4">
+                <span class="num">4</span>
+              </div>
+              <div class="header-prograssive">
+                <span>step 4</span>
+                <header>
+                  <h1>summary</h1>
+                </header>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <section class="aside-right">
+        <div class="form-container">
+          <section class="form-container-inside">
+            <div class="header">
+              <header>
+                <h1>Personal info</h1>
+              </header>
+              <article>
+                <p>Please provide your name, email address, and phone number.</p>
+              </article>
+            </div>
+            <main>
+              <form class="personal-info">
+                <div class="name">
+                  <div class="label-header ">
+                    <label for="name">Name</label>
+                    <span class="error-message">This field is required</span>
+                  </div>
+                  <input type="text" id="name" placeholder="e.g.Hanuman" class="inputs">
+                </div>
+                <div class="email-addrees">
+                  <div class="label-header ">
+                    <label for="email">Email Address</label>
+                    <span class="error-message">This field is required</span>
+                  </div>
+                  <input type="email" id="email" placeholder="e.g.hanuman@gmail.com" class="inputs">
+                </div>
+                <div class="phone-number">
+                  <div class="label-header ">
+                    <label for="phone">Phone Number</label>
+                    <span class="error-message">This field is required</span>
+                  </div>
+                  <input type="tel" id="phone" placeholder="e.g.+123456789" class="inputs phone" maxlength="10">
+                </div>
+                <div class="btn-group">
+                  <button type="submit" class="next-step-btn" aria-label="next-step" style="margin-left: auto;">
+                    Next Step
+                  </button>
+                </div>
+              </form>
+            </main>
+          </section>
+        </div>
+        <div class="form-container">
+          <section class="form-container-inside">
+            <div class="header">
+              <header>
+                <h1>Select your plan</h1>
+              </header>
+              <article>
+                <p>You have the option of monthly or yearly billing.</p>
+              </article>
+            </div>
+            <main>
+              <form class="select-plan">
+                <div class="cards">
+                  <div class="card arcade selected-card">
+                    <figure class="arcade-img">
+                      <img src="./images/icon-arcade.png" alt="">
+                    </figure>
+                    <div class="arcade-content">
+                      <header>
+                        <h1>Arcade</h1>
+                      </header>
+                      <span aria-label="9" class="price"></span>
+                      <span class="two-month-free font-weight-400 font-marine-blue"></span>
+                    </div>
+                  </div>
+                  <div class="card advanced">
+                    <figure class="advanced-img">
+                      <img src="./images/icon-advanced.png" alt="">
+                    </figure>
+                    <div class="arcade-content">
+                      <header>
+                        <h1>Advanced</h1>
+                      </header>
+                      <span aria-label="12" class="price"></span>
+                      <span class="two-month-free font-weight-400 font-marine-blue"></span>
+                    </div>
+                  </div>
+                  <div class="card pro">
+                    <figure class="pro-img">
+                      <img src="./images/icon-pro.png" alt="">
+                    </figure>
+                    <div class="arcade-content">
+                      <header>
+                        <h1>Pro</h1>
+                      </header>
+                      <span aria-label="15" class="price"></span>
+                      <span class="two-month-free font-weight-400 font-marine-blue"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="monthly-or-year">
+                  <span class="monthly font-weight-700 font-marine-blue">
+                    Monthly
+                  </span>
+                  <div class="toggle-container">
+                    <div class="toggle-dtn" aria-label="montly" aria-checked="false"></div>
+                  </div>
+                  <span class="yearly font-weight-700 text-light-gray">
+                    Yearly
+                  </span>
+                </div>
+                <footer class="btn-group">
+                  <button type="submit" aria-label="previous-step">
+                    Go back
+                  </button>
+                  <button type="submit" class="next-step-btn" aria-label="next-step">
+                    Next Step
+                  </button>
+                </footer>
+              </form>
+            </main>
+          </section>
+        </div>
+        <div class="form-container">
+          <section class="form-container-inside">
+            <div class="header">
+              <header>
+                <h1>Pick add-ons</h1>
+              </header>
+              <article>
+                <p>Add-ons help enhance your gaming experience.</p>
+              </article>
+            </div>
+            <main>
+              <form class="add-ons">
+                <div class="add-service add-selected">
+                  <input type="checkbox" name="service" checked>
+                  <div class="online-service">
+                    <h1 class="text-16">Online Service</h1>
+                    <article>
+                      <p class="text-light-gray">Access to multiplayer games</p>
+                    </article>
+                  </div>
+                  <span aria-label="1">+$1/mo</span>
+                </div>
+                <div class="add-service add-selected">
+                  <input type="checkbox" name="storage" checked>
+                  <div class="large-storage">
+                    <h1 text-16>Larger storage</h1>
+                    <article>
+                      <p class="text-light-gray">Extra 1TB of cloud save</p>
+                    </article>
+                  </div>
+                  <span aria-label="2">+$2/mo</span>
+                </div>
+                <div class="add-service">
+                  <input type="checkbox" name="profile" class="profile-check">
+                  <div class="customizable-profile">
+                    <h1 class="text-16">Customizable Profile</h1>
+                    <article>
+                      <p class="text-light-gray">Custom theme on your profile</p>
+                    </article>
+                  </div>
+                  <span aria-label="1">+$2/mo</span>
+                </div>
+                <footer class="btn-group">
+                  <button type="submit" aria-label="previous-step">
+                    Go back
+                  </button>
+                  <button type="submit" class="next-step-btn" aria-label="next-step">
+                    Next Step
+                  </button>
+                </footer>
+              </form>
+            </main>
+          </section>
+        </div>
+        <div class="form-container">
+          <section class="form-container-inside">
+            <div class="header">
+              <header>
+                <h1>Finishing up</h1>
+              </header>
+              <article>
+                <p>Double-check everything looks OK before confirming.</p>
+              </article>
+            </div>
+            <main>
+              <form class="finishing-up">
+                <div class="finsinup-container">
+
+                </div>
+                <div class="total-price flex items-center justify-between text-purplish-blue">
+
+                </div>
+                <footer class="btn-group">
+                  <button type="submit" aria-label="previous-step">
+                    Go back
+                  </button>
+                  <button type="submit" class="next-step-btn" aria-label="confirm">
+                    Confirm
+                  </button>
+                </footer>
+              </form>
+            </main>
+          </section>
+        </div>
+        <div class="form-container">
+          <section class="form-container-inside" style="row-gap: 2rem;text-align: center;">
+            <div class="thankyou">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                <g fill="none">
+                  <circle cx="40" cy="40" r="40" fill="#F9818E" />
+                  <path fill="#E96170"
+                    d="M48.464 79.167c.768-.15 1.53-.321 2.288-.515a40.04 40.04 0 0 0 3.794-1.266 40.043 40.043 0 0 0 3.657-1.63 40.046 40.046 0 0 0 12.463-9.898A40.063 40.063 0 0 0 78.3 51.89c.338-1.117.627-2.249.867-3.391L55.374 24.698a21.6 21.6 0 0 0-15.332-6.365 21.629 21.629 0 0 0-15.344 6.365c-8.486 8.489-8.486 22.205 0 30.694l23.766 23.775Z" />
+                  <path fill="#FFF"
+                    d="M40.003 18.333a21.58 21.58 0 0 1 15.31 6.351c8.471 8.471 8.471 22.158 0 30.63-8.47 8.47-22.156 8.47-30.627 0-8.47-8.472-8.47-22.159 0-30.63a21.594 21.594 0 0 1 15.317-6.35Zm9.865 15c-.316.028-.622.15-.872.344l-12.168 9.13-5.641-5.642c-1.224-1.275-3.63 1.132-2.356 2.356l6.663 6.663c.56.56 1.539.63 2.173.156l13.326-9.995c1.122-.816.43-2.993-.956-3.013a1.666 1.666 0 0 0-.17 0Z" />
+                </g>
+              </svg>
+            </div>
+            <div class="header">
+              <header>
+                <h1>Thank you!</h1>
+              </header>
+              <article style="margin-top: 1rem;">
+                <p> Thanks for confirming your subscription! We hope you have fun
+                  using our platform. If you ever need support, please feel free
+                  to email us at support@loremgaming.com.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+  </section>
+
+  <!-- Sidebar start -->
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
